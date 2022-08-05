@@ -1,0 +1,52 @@
+*장고 웹페이지 github와 연동
+
+- github 새로운 repository(이름: cakd7_django) 생성
+
+- git clone 깃주소 복사내용 
+- cd cakd7_django
+- django-admin startproject dj .   : 현재 디렉토리에서 장고 프로젝트 시작하겠다
+- .gitignore 파일(업데이트하지말아야할 목록)을 구글드라이브에 다운받아서 cakd7_django폴더 안에 넣어두기
+
+- python manage.py migrate : 해당 앱들이 필요로 하는 데이터베이스를 생성
+- python manage.py createsuperuser -> y 입력 -> id 입력 -> 이메일 건너뛰기 -> password: 1234 두번 입력  : 슈퍼관리자 만들기
+
+- python manage.py runserver
+  -> ctrl을 누르면서 output에 나온 주소를 클릭하면 로케트 쓩쓩 나타남 그럼 잘된거임
+  -> 주소창에 /admin을 입력 하고 위에서 입력했던 id, password 입력하면 admin 기능을 사용 할 수 있음
+  -> viewsite 누르면 다시 로케트 쓩쓩으로 돌아옴
+- ctrl+c하면 나갈 수 있음 -> git add . : 로컬 git에 모든 것을 다 반영하겠다
+
+****************** 깃헙 홈페이지에서 내 토큰 알아오기*******************************************************************************************************************************************************************************************************************************************************************************************************************************
+참고 홈페이지: https://firstquarter.tistory.com/entry/Git-%ED%86%A0%ED%81%B0-%EC%9D%B8%EC%A6%9D-%EB%A1%9C%EA%B7%B8%EC%9D%B8-remote-Support-for-password-authentication-was-removed-on-August-13-2021-Please-use-a-personal-access-token-instead
+
+- 깃헙 홈페이지 - settings - Developer settings -personal access tokens - generate new token 
+- note 입력, repo 만 선택
+- 나의 토큰: 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
+*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+- git config --global user.email "kqy951118@gmail.com"
+- git config --global user.name "choi_aerim"
+- git commit -m "프로젝트 생성(수정입력내용)"
+- git push   -> user name(choi_aerim) 입력 -> password에 내 토큰 입력
+
+
+- python manage.py startapp blog 
+- python manage.py startapp single_pages
+
+-dj - setting.py 파일 열고 
+INSTALLED_APPS ->
+'blog',
+'single_pages',
+추가
+
+TIME_ZONE ->
+'Asia/Seoul'
+로 수정
+
+- git add . 
+- git commit -m "프로젝트 생성(수정입력내용)"
+- git push   -> user name(choi_aerim) 입력 -> password에 내 토큰 입력
+
+
+
+
