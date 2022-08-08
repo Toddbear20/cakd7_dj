@@ -1,18 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Blog</h1>
-    {% for p in post_list %}
-        <hr/>
-        <h2><a href="{{p.get_absolute_url}}">{{p.title}}</a></h2>
-        <h4>{{p.created_at}}</h4>
-        <p>{{p.content}}</p>
-    {% endfor %}
-</body>
-</html>
+{% extends 'blog/base.html' %}
+
+{% block head_title %} {% endblock %}
+
+{% block main_area %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg col-sm">
+        <h1 class = 'text-white'>Blog</h1> 
+        {% for p in post_list %}
+            <hr/>
+            <div class='card mb-4'>
+              <img class='card-img-top' scr='https://cdn.pixabay.com/photo/2021/08/25/07/21/cat-6572630_960_720.jpg' alt='Card image cap'>
+              <div class='card-body text-body'>
+                <h2 class='card-title'><a href="{{p.get_absolute_url}}">{{p.title}}</a></h2>
+                <p class='card-text'>{{p.content}}</p>
+              </div>
+              <div class='card-footer text-muted'>
+                Posted on {{p.created_at}} by SCH
+              </div>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,20 @@
+body {
+    background: url('https://cdn.pixabay.com/photo/2022/07/31/22/32/moon-7357007_960_720.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom : 100px;
+}
+a {
+    text-decoration: none !important;
+    color: black;
+}
+section {
+    margin-bottom: 150px;
+    
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.6);
+}
