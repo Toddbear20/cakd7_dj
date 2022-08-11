@@ -7,11 +7,9 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    
 }
 section {
     margin-bottom: 150px;
     color: aliceblue;
-}
-image {
-    border-radius: 20, 20, 20, 20;
 }
