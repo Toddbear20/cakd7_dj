@@ -3,6 +3,7 @@
 {% block head_title %} {{post.title}} -Blog {% endblock %}
 {% block main_area %}
 
+      <div id='mainsaction'>
         {% if post.head_image %}
                 <img class='img-fluid rounded' src='{{ post.head_image.url }}' alt='{{ post }} head image'>
         {%else%}
@@ -50,6 +51,7 @@
           {{post.get_file_name}}
          </a>
         {% endif %}
+        </div>
         <div id="comment-area">
           <!-- Comments Form -->
           <div class="card my-4">
