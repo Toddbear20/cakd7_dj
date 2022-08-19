@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'blog',
     'single_pages',
+    'program',
+    'ml',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,31 @@
+{% extends 'blog/base_full_width.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}Edit Comment - Blog{% endblock %}
+
+{% block main_area %}
+            <h1>두구두구두구두구두구두구두구</h1>
+            <h1>결과발표!</h1>
+<hr/>
+<div class='col-lg-6'>
+    <ul class='mb-0'>
+        {% for i in ans%}
+        <li>
+            <p>로또번호 : {{i}}</p>
+        </li>
+        {%endfor%}
+        <li>
+            <h4>{{num}}000원 어치</h4>
+    </ul>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

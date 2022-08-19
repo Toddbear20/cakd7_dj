@@ -1,0 +1,59 @@
+{% extends 'blog/base_full_width.html' %}
+{% block head_title %}ML{% endblock %}
+
+{% block main_area %}
+        <div class='container'>
+            <h1>ML</h1>
+            <hr/>  
+            <form action='ml_result'>
+                <h1>타이타닉 생존자 예측</h1>
+                
+                <ul>
+                    <li>
+                        <label for="fare_cat">fare_cat :</label>
+                        <input name='fare_cat' id='fare_cat'>
+                    </li>
+                    <li>
+                        <label for="age_cat">age_cat :</label>
+                        <input name='age_cat' id='age_cat'>
+                    </li>
+                    <li>
+                        <label for="family">family :</label>
+                        <input name='family' id='family'>
+                    </li>
+                    <li>
+                        <label for="sex_female">sex_female :</label>
+                        <input name='sex_female' id='sex_female'>
+                    </li>
+                    <li>
+                        <label for="sex_male">sex_male :</label>
+                        <input name='sex_male' id='sex_male'>
+                    </li>
+                    <li>
+                        <label for="embarked_C">embarked_C :</label>
+                        <input name='embarked_C' id='embarked_C'>
+                    </li>
+                    <li>
+                        <label for="embarked_Q">embarked_Q :</label>
+                        <input name='embarked_Q' id='embarked_Q'>
+                    </li>
+                    <li>
+                        <label for="embarked_S">embarked_S :</label>
+                        <input name='embarked_S' id='embarked_S'>
+                    </li>
+                </ul>
+
+                <button type='submit' class="btn btn-danger">Go</button>
+                
+            </form>
+            <br/>
+
+        </div>
+{% endblock %}
+
+
+
+
+
+
+ 

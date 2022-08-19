@@ -1,0 +1,39 @@
+{% extends 'blog/base_full_width.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}Edit Comment - Blog{% endblock %}
+
+{% block main_area %}
+    <h1>타이타닉 생존 예측 결과</h1>
+<hr/>
+<div class='col-lg-6'>
+    <ul class='mb-0'>
+        <li>
+            <h4>입력값 : {{lis}}</h4>
+        </li>
+    </ul>
+    <div class="card" style="width: 25rem; ">
+        {%if y_pred == "Survived" %}
+            <img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202201/24/7f4aab51-e95c-4c2b-a454-94d0f8eefd08.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-primary">
+                <p class="card-text">생존하셨습니다.</p>
+            </div>
+        {%else%}
+            <img src="http://www.scjournal.kr/data/photos/20190415/art_15547002011478_b6ebb6.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-danger">
+                <p class="card-text">안타깝습니다.</p>
+            </div>
+        {%endif%}
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
